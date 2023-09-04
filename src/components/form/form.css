@@ -99,3 +99,8 @@ input.error{
     }
     
 }
+@media only screen and (max-width: 360px) {
+    .input-container label{
+        font-size: .7318rem;
+    }
+}
