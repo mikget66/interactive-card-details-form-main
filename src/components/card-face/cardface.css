@@ -4,6 +4,9 @@
     aspect-ratio: 1.84;
     border-radius: 10px;
     overflow: hidden;
+    -webkit-box-shadow: 36px 63px 75px -43px rgba(89,89,89,0.49);
+    -moz-box-shadow: 36px 63px 75px -43px rgba(89,89,89,0.49);
+    box-shadow: 36px 63px 75px -43px rgba(89,89,89,0.49);
 }
 .CardFace{
     background-image: url(../../assets/bg-card-front.png);

@@ -36,7 +36,10 @@ const Form = ({ onChange ,setSubmit}) => {
         }
         if (!values.card_number) {
             errors.card_number = "cant't be blank";
+        }else if(values.card_number.length< 19){
+            errors.card_number = "must be 16 digits";
         }
+
         if (!values.mm) {
             errors.mm = "cant't be blank";
         }else if(values.mm.length< 2){
