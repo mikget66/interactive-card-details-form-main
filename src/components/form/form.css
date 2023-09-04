@@ -94,5 +94,8 @@ input.error{
     .input-container{
         gap: 0;
     }
+    input{
+        font-size: .9rem;
+    }
     
 }
