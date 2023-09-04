@@ -72,6 +72,25 @@ input.error{
 .form :nth-child(3) :nth-child(1) label{
     margin-bottom: 4px;
 }
+.attribution{
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  .attribution .github{
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: #302c5b;
+    
+  }
+  .attribution a{
+  text-decoration: none;
+  color: #302c5b;
+  }
 
 @media only screen and (max-width: 770px) {
     .input-container label{

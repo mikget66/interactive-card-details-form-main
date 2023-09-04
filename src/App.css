@@ -23,22 +23,7 @@
   justify-content: center;
   width: 100%;
 }
-.attribution{
-  position: absolute;
-  bottom: 5px;
-}
-.attribution .github{
-  font-style: italic;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  font-weight: bold;
-  color: #302c5b;
-  
-}
-.attribution a{
-text-decoration: none;
-color: #302c5b;
-}
+
 
 
 @media only screen and (max-width: 600px) {
