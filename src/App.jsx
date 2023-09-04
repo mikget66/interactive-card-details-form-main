@@ -6,7 +6,7 @@ import CardFace from './components/card-face/CardFace';
 import CardBack from './components/card-back/CardBack';
 import Submitted from './components/submitted/Submitted';
 
-import {BsGithub} from 'react-icons/bs' 
+ 
 
 
 export const CardContext = createContext();
@@ -49,10 +49,7 @@ function App() {
               :
               <Submitted />
             }
-            <div class="attribution">
-              Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-              Coded by <a href="https://github.com/mikget66" className='github'>Michael Anwar <BsGithub/></a>.
-            </div>
+            
           </div>
 
         </submitContext.Provider>

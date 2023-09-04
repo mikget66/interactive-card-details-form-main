@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './form.css'
 import { CardContext} from '../../App'
+import {BsGithub} from 'react-icons/bs'
 const Form = ({ onChange ,setSubmit}) => {
 
     const card = useContext(CardContext)
@@ -155,6 +156,10 @@ const Form = ({ onChange ,setSubmit}) => {
                 <input type="submit" value="confirm" />
 
             </form>
+            <div class="attribution">
+              Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+              Coded by <a href="https://github.com/mikget66" className='github'>Michael Anwar <BsGithub/></a>.
+            </div>
         </div>
     )
 }

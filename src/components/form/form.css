@@ -75,7 +75,7 @@ input.error{
 
 @media only screen and (max-width: 770px) {
     .input-container label{
-        font-size: .8318rem;
+        font-size: .86rem;
     }
     .form :nth-child(3) :nth-child(2) label{
         margin-bottom: 4px;
@@ -87,6 +87,7 @@ input.error{
         padding: 0;
         gap: 0rem;
         margin-top: 2rem;
+        /* margin-bottom: ; */
         width: 80%;
     }
     p.error{
@@ -96,7 +97,7 @@ input.error{
         gap: 0;
     }
     input{
-        font-size: .9rem;
+        font-size: 1rem;
     }
     
 }
