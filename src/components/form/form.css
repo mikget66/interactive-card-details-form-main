@@ -1,0 +1,98 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    width: 70%;
+    margin: 0 auto;
+    /* min-width:400px; */
+    max-width: 740px;
+    gap: 1rem;
+}
+.input-container{
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ margin: .3rem 0;
+ gap: .5rem;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: .5rem;
+    align-items:start;
+}
+.row-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:0 .5rem;
+}
+.row-grid >.input-container input{
+    width: 100%;
+}
+.two {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: px;
+}
+.half{
+    width: 50%;
+}
+input[type=submit]{
+    display: block;
+    width: 100%;
+    background-color: #201d3b;
+    color: #fff;
+    border: 2px solid #201d3b;
+}
+
+input{
+    
+    height: 3.2rem;
+    border-radius: 5px;
+    border:.12rem solid #c4c4c4;
+    outline: none;
+    padding: 0 .5rem;
+    font-size: 1.2rem;
+}
+input::placeholder{
+    color: #c4c4c4;
+}
+input:focus{
+    border:2px solid #302c5b;
+}
+p.error{
+    color: red;
+    padding: 0;
+}
+input.error{
+    border:.12rem solid red;
+}
+.form :nth-child(3) :nth-child(1) label{
+    margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 770px) {
+    .input-container label{
+        font-size: .8318rem;
+    }
+    .form :nth-child(3) :nth-child(2) label{
+        margin-bottom: 4px;
+    }
+    .form :nth-child(3) :nth-child(1) label{
+        margin-bottom: 0px;
+    }
+    .form{
+        padding: 0;
+        gap: 0rem;
+        margin-top: 2rem;
+    }
+    p.error{
+        margin: 0;
+    }
+    .input-container{
+        gap: 0;
+    }
+    
+}

@@ -1,0 +1,66 @@
+.card{
+    width: 100%;
+    display: flex;
+    aspect-ratio: 1.84;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.CardFace{
+    background-image: url(../../assets/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+    margin-right: calc(-60% - 1.5rem);
+
+}
+.CardFace .card-number{
+    text-align: center;
+    font-size: clamp(1.5rem, 3vh, 3.5rem); 
+    font-weight: 350;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+}
+.CardFace .card-info{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.CardFace .last_info{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+.CardFace svg{
+    align-self: flex-start;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .CardFace{
+        width: 80%;
+        margin: 0;
+        position: absolute;
+        bottom: -5.9rem;
+        left: 1.5rem;
+        z-index: 3;
+    }
+    .CardFace svg{
+        stroke-width: .5px;
+        width: 10;
+    }
+    .CardFace .card-number{
+        font-size: 1.4rem;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .CardFace .card-number{
+        font-size: .97rem;
+        letter-spacing: opx;
+    }
+  }

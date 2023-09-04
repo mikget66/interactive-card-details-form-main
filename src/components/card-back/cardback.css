@@ -1,0 +1,27 @@
+.cardback{
+    background-image: url(../../assets/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin-right: calc(-100% - 1.5rem);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(7,1fr);
+}
+
+.cardback span{
+    grid-area: 4 / 10 / 5 / 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .cardback{
+        width: 80%;
+        margin: 0;
+        position: absolute;
+        right: 1.5rem;
+    }
+  }
