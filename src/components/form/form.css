@@ -87,6 +87,7 @@ input.error{
         padding: 0;
         gap: 0rem;
         margin-top: 2rem;
+        width: 80%;
     }
     p.error{
         margin: 0;
