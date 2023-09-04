@@ -73,8 +73,8 @@ input.error{
     margin-bottom: 4px;
 }
 .attribution{
+    align-self: flex-end;
     margin-top: 1rem;
-    position: absolute;
     bottom: 5px;
     width: 100%;
     text-align: center;
