@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
     color: white;
     margin-right: calc(-60% - 1.5rem);
 
