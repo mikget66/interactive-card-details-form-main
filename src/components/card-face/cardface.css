@@ -41,6 +41,9 @@
 
 .CardFace svg{
     align-self: flex-start;
+    width: 20%;
+    margin: 0;
+    padding: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -54,10 +57,7 @@
         left: 1.5rem;
         z-index: 3;
     }
-    .CardFace svg{
-        stroke-width: .5px;
-        width: 10;
-    }
+    
     .CardFace .card-number{
         font-size: 1.4rem;
     }
