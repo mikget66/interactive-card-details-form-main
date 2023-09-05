@@ -1,14 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './form.css'
-import { CardContext} from '../../App'
-import {BsGithub} from 'react-icons/bs'
-const Form = ({ onChange ,setSubmit}) => {
+import { CardContext } from '../../App'
+import { BsGithub } from 'react-icons/bs'
+const Form = ({ onChange, setSubmit, cn, setCn ,setChangedIndex}) => {
 
     const card = useContext(CardContext)
-    
+
 
     const [isclicked, setisclicked] = useState(false);
     const [errors, setErrors] = useState({});
+
 
     const handleCardNumberChange = (event) => {
         let cardNumber = event.target.value;
@@ -21,7 +22,25 @@ const Form = ({ onChange ,setSubmit}) => {
 
         event.target.value = formattedCardNumber.trim(); // Update the input field value
 
+
+
         onChange(event); // Call the original onChange event handler
+
+        const input = event.target.value;
+        const formattedInput = input.replace(/\s/g, ''); // Remove spaces from input
+        const updatedCn = formattedInput
+            .split('')
+            .map((char) => parseInt(char, 10))
+            .slice(0, 16); // Limit to 16 digits
+
+        setCn([...updatedCn, ...Array(16 - updatedCn.length).fill(0)]);
+
+        const changedIndex = cn.findIndex((number, index) => {
+            return updatedCn[index] !== number;
+          });
+        
+          setChangedIndex(changedIndex);
+
     };
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -36,31 +55,31 @@ const Form = ({ onChange ,setSubmit}) => {
         }
         if (!values.card_number) {
             errors.card_number = "cant't be blank";
-        }else if(values.card_number.length< 19){
+        } else if (values.card_number.length < 19) {
             errors.card_number = "must be 16 digits";
         }
 
         if (!values.mm) {
             errors.mm = "cant't be blank";
-        }else if(values.mm.length< 2){
+        } else if (values.mm.length < 2) {
             errors.mm = "must be 2 digits";
-        }else if (isNaN(values.mm)) {
+        } else if (isNaN(values.mm)) {
             errors.mm = "must be a number";
         }
 
         if (!values.yy) {
             errors.yy = "cant't be blank";
-        }else if(values.yy.length< 2){
+        } else if (values.yy.length < 2) {
             errors.yy = "must be 2 digits";
-        }else if (isNaN(values.yy)) {
+        } else if (isNaN(values.yy)) {
             errors.yy = "must be a number";
         }
 
         if (!values.cvc) {
             errors.cvc = "cant't be blank";
-        }else if(values.cvc.length< 3){
+        } else if (values.cvc.length < 3) {
             errors.cvc = "must be 3 digits";
-        }else if (isNaN(values.cvc)) {
+        } else if (isNaN(values.cvc)) {
             errors.cvc = "must be a number";
         }
 
@@ -113,7 +132,7 @@ const Form = ({ onChange ,setSubmit}) => {
                             <div className='input-container'>
                                 <input
                                     type="text"
-                                    className={`half ${errors.mm?"error":null}`}
+                                    className={`half ${errors.mm ? "error" : null}`}
                                     name='mm'
                                     defaultValue={card.mm}
                                     placeholder='MM'
@@ -127,7 +146,7 @@ const Form = ({ onChange ,setSubmit}) => {
                             <div className='input-container'>
                                 <input
                                     type="text"
-                                    className={`half ${errors.yy?"error":null}`}
+                                    className={`half ${errors.yy ? "error" : null}`}
                                     name='yy'
                                     defaultValue={card.yy}
                                     placeholder='YY'
@@ -159,9 +178,9 @@ const Form = ({ onChange ,setSubmit}) => {
                 <input type="submit" value="confirm" />
 
             </form>
-            <div class="attribution">
-              Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-              Coded by <a href="https://github.com/mikget66" className='github'>Michael Anwar <BsGithub/></a>.
+            <div className="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="https://github.com/mikget66" className='github'>Michael Anwar <BsGithub /></a>.
             </div>
         </div>
     )

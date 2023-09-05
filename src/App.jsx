@@ -22,6 +22,9 @@ function App() {
   });
   const [submitted, setSubmitted] = useState(false)
 
+  const [cn, setCn] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+  const [changedIndex, setChangedIndex] = useState(-1);
+
   function handleChange(event) {
     const { name, value } = event.target;
     setCard((prevCard) => ({
@@ -37,7 +40,10 @@ function App() {
       <CardContext.Provider value={card}>
         <submitContext.Provider value={submitted}>
           <div className="left">
-            <CardFace />
+            <CardFace 
+              cn={cn}
+              changedIndex={changedIndex}
+            />
             <CardBack />
           </div>
           <div className="right">
@@ -45,7 +51,12 @@ function App() {
               <Form
                 onChange={handleChange}
                 setSubmit={setSubmitted}
-                card={card} />
+                card={card}
+                setCn={setCn}
+                cn={cn}
+                changedIndex={changedIndex}
+                setChangedIndex={setChangedIndex}
+                />
               :
               <Submitted />
             }
